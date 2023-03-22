@@ -1,0 +1,81 @@
+
+<root>
+    <Usuarios>
+        <Usuario Nombre="Adam" Password="9Ydsy" />
+        <Usuario Nombre="Andrew" Password="u5InA" />
+        <Usuario Nombre="Tina" Password="W1BVk" />
+        <Usuario Nombre="Sara" Password="8WuYP" />
+        <Usuario Nombre="Melissa" Password="XD3Wb" />
+        <Usuario Nombre="Terri" Password="m7Bzw" />
+        <Usuario Nombre="Kimberly" Password="2ISya" />
+        <Usuario Nombre="Lauren" Password="n6EdD" />
+        <Usuario Nombre="Robert" Password="6Aord" />
+    </Usuarios>
+    <ClasesdeArticulos>
+        <ClasesdeArticulo Nombre="Plomeria" />
+        <ClasesdeArticulo Nombre="Electricos" />
+        <ClasesdeArticulo Nombre="Ebanisteria" />
+    </ClasesdeArticulos>
+    <Articulos>
+        <Articulo Nombre="Tachuela" ClasesdeArticulo="Ebanisteria" precio="808.82" />
+        <Articulo Nombre="Agarradera" ClasesdeArticulo="Ebanisteria" precio="946.26" />
+        <Articulo Nombre="Arandela PVC" ClasesdeArticulo="Ebanisteria" precio="2789.62" />
+        <Articulo Nombre="Bisagra" ClasesdeArticulo="Ebanisteria" precio="8104.98" />
+        <Articulo Nombre="Cinta" ClasesdeArticulo="Ebanisteria" precio="1956.66" />
+        <Articulo Nombre="Clavo Acero" ClasesdeArticulo="Ebanisteria" precio="4422.48" />
+        <Articulo Nombre="Clavo CTE" ClasesdeArticulo="Ebanisteria" precio="2431.96" />
+        <Articulo Nombre="Escuadra" ClasesdeArticulo="Ebanisteria" precio="284.71" />
+        <Articulo Nombre="Grapa" ClasesdeArticulo="Ebanisteria" precio="8208.35" />
+        <Articulo Nombre="Lija" ClasesdeArticulo="Ebanisteria" precio="6410.14" />
+        <Articulo Nombre="Masking Tape" ClasesdeArticulo="Ebanisteria" precio="9643.98" />
+        <Articulo Nombre="Picaporte" ClasesdeArticulo="Ebanisteria" precio="9833.26" />
+        <Articulo Nombre="Plastico" ClasesdeArticulo="Ebanisteria" precio="8016.04" />
+        <Articulo Nombre="Resbalon" ClasesdeArticulo="Ebanisteria" precio="3718.89" />
+        <Articulo Nombre="Riel P" ClasesdeArticulo="Ebanisteria" precio="1065.0" />
+        <Articulo Nombre="Tachuelon" ClasesdeArticulo="Ebanisteria" precio="4370.76" />
+        <Articulo Nombre="Tiradera" ClasesdeArticulo="Ebanisteria" precio="4643.25" />
+        <Articulo Nombre="Tope P" ClasesdeArticulo="Ebanisteria" precio="405.6" />
+        <Articulo Nombre="Cuchillas" ClasesdeArticulo="Ebanisteria" precio="1035.16" />
+        <Articulo Nombre="Esmeril" ClasesdeArticulo="Ebanisteria" precio="8878.38" />
+        <Articulo Nombre="Bombillo" ClasesdeArticulo="Electricos" precio="1544.98" />
+        <Articulo Nombre="Lavadora" ClasesdeArticulo="Electricos" precio="5589.96" />
+        <Articulo Nombre="Secadora" ClasesdeArticulo="Electricos" precio="7778.7" />
+        <Articulo Nombre="Lavavajillas" ClasesdeArticulo="Electricos" precio="8352.79" />
+        <Articulo Nombre="Horno" ClasesdeArticulo="Electricos" precio="2945.74" />
+        <Articulo Nombre="Ventilador" ClasesdeArticulo="Electricos" precio="8494.19" />
+        <Articulo Nombre="Microondas" ClasesdeArticulo="Electricos" precio="7475.51" />
+        <Articulo Nombre="Aspiradora" ClasesdeArticulo="Electricos" precio="9276.32" />
+        <Articulo Nombre="Tostadora" ClasesdeArticulo="Electricos" precio="1313.06" />
+        <Articulo Nombre="Feidora" ClasesdeArticulo="Electricos" precio="3221.07" />
+        <Articulo Nombre="Cafetera" ClasesdeArticulo="Electricos" precio="1793.62" />
+        <Articulo Nombre="Computadora" ClasesdeArticulo="Electricos" precio="2840.73" />
+        <Articulo Nombre="Impresora" ClasesdeArticulo="Electricos" precio="8991.74" />
+        <Articulo Nombre="Calculadora" ClasesdeArticulo="Electricos" precio="7788.08" />
+        <Articulo Nombre="Radio" ClasesdeArticulo="Electricos" precio="709.79" />
+        <Articulo Nombre="Camara" ClasesdeArticulo="Electricos" precio="9701.47" />
+        <Articulo Nombre="Lampara" ClasesdeArticulo="Electricos" precio="162.7" />
+        <Articulo Nombre="Congelador" ClasesdeArticulo="Electricos" precio="8547.59" />
+        <Articulo Nombre="Monitor" ClasesdeArticulo="Electricos" precio="874.1" />
+        <Articulo Nombre="Licuadora" ClasesdeArticulo="Electricos" precio="9966.81" />
+        <Articulo Nombre="Sierra" ClasesdeArticulo="Plomeria" precio="669.81" />
+        <Articulo Nombre="Pinza" ClasesdeArticulo="Plomeria" precio="1404.42" />
+        <Articulo Nombre="Cinta Telfon" ClasesdeArticulo="Plomeria" precio="9631.58" />
+        <Articulo Nombre="Llave Inglesa" ClasesdeArticulo="Plomeria" precio="5240.89" />
+        <Articulo Nombre="Llave Stillson" ClasesdeArticulo="Plomeria" precio="8989.02" />
+        <Articulo Nombre="Terraja" ClasesdeArticulo="Plomeria" precio="4368.21" />
+        <Articulo Nombre="Bomba" ClasesdeArticulo="Plomeria" precio="5016.48" />
+        <Articulo Nombre="Taladro" ClasesdeArticulo="Plomeria" precio="7244.23" />
+        <Articulo Nombre="Desastacador" ClasesdeArticulo="Plomeria" precio="7191.32" />
+        <Articulo Nombre="Empaques" ClasesdeArticulo="Plomeria" precio="1238.98" />
+        <Articulo Nombre="Llave Grifa" ClasesdeArticulo="Plomeria" precio="3855.03" />
+        <Articulo Nombre="Tenazas" ClasesdeArticulo="Plomeria" precio="3883.46" />
+        <Articulo Nombre="Soplete" ClasesdeArticulo="Plomeria" precio="1702.15" />
+        <Articulo Nombre="Abocinador" ClasesdeArticulo="Plomeria" precio="8695.96" />
+        <Articulo Nombre="Mordaza Cadena" ClasesdeArticulo="Plomeria" precio="8638.03" />
+        <Articulo Nombre="Cinta Aislante" ClasesdeArticulo="Plomeria" precio="1620.85" />
+        <Articulo Nombre="Cinta Metrica" ClasesdeArticulo="Plomeria" precio="3122.62" />
+        <Articulo Nombre="Mordaza Grip" ClasesdeArticulo="Plomeria" precio="1274.54" />
+        <Articulo Nombre="Tarraja" ClasesdeArticulo="Plomeria" precio="680.17" />
+        <Articulo Nombre="Martillo" ClasesdeArticulo="Plomeria" precio="494.92" />
+    </Articulos>
+</root>
