@@ -1,0 +1,28 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[MostrarArticulosPorCantidad]
+    @Cantidad VARCHAR(50) = NULL
+AS
+BEGIN
+    IF @Cantidad IS NULL
+    BEGIN
+        SELECT A.Id, A.Nombre, A.Precio, C.Nombre AS ClaseArticulo
+        FROM Articulo A
+        INNER JOIN ClaseArticulo C ON A.IdClaseArticulo = C.Id
+        ORDER BY A.Nombre ASC;
+    END
+    ELSE IF TRY_CONVERT(INT, @Cantidad) IS NOT NULL AND CONVERT(INT, @Cantidad) > 0
+    BEGIN
+        SELECT TOP(CONVERT(INT, @Cantidad)) A.Id, A.Nombre, A.Precio, C.Nombre AS ClaseArticulo
+        FROM Articulo A
+        INNER JOIN ClaseArticulo C ON A.IdClaseArticulo = C.Id
+        ORDER BY A.Nombre ASC;
+    END
+    ELSE
+    BEGIN
+        PRINT 'El valor de @Cantidad debe ser un entero positivo.'
+    END
+END
+GO
