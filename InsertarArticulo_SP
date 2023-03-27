@@ -1,0 +1,42 @@
+ALTER PROCEDURE InsertarArticulo
+    @ClaseArticulo VARCHAR(124)
+    ,@inNombre VARCHAR(124)
+    ,@inPrecio VARCHAR(20)
+    ,@outResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF (ISNUMERIC(@inPrecio) = 0 OR @inPrecio = '')
+    BEGIN
+        PRINT 'Error: el valor del precio no es un precio monetario correcto';
+        SET @outResultCode = 500002; -- Código de error
+        --RETURN;
+    END
+
+    ELSE IF (SELECT COUNT(Nombre) 
+        FROM Articulo
+        WHERE Nombre = @inNombre) >= 2
+    BEGIN
+        PRINT 'Error: ya existen dos artículos con el mismo nombre en la tabla.';
+        SET @outResultCode = 500001; -- Código de error
+        --RETURN;
+    END
+
+    ELSE IF (@outResultCode >= 0)
+    BEGIN
+        INSERT INTO Articulo (IdClaseArticulo
+                                , Nombre
+                                , Precio)
+        VALUES (@ClaseArticulo
+                , @inNombre
+                , @inPrecio);
+
+        --SET @outResultCode = @@ROWCOUNT;
+    END
+    SELECT @outResultCode AS resultCode;
+END;
+
+
+
+
