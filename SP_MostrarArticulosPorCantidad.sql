@@ -15,11 +15,15 @@ BEGIN
 
 	IF @inCantidad = 0
     BEGIN
-        SELECT A.Id, A.Nombre, A.Precio, C.Nombre AS ClaseArticulo
+        SELECT A.Id
+		, A.Nombre
+		, A.Precio
+		, C.Nombre AS ClaseArticulo
         FROM Articulo A
         INNER JOIN ClaseArticulo C ON A.IdClaseArticulo = C.Id
         ORDER BY A.Nombre ASC;
-    END
+    END;
+
     ELSE IF @inCantidad > 0
     BEGIN
         SELECT TOP(@inCantidad) 
@@ -30,11 +34,12 @@ BEGIN
         FROM [dbo].[Articulo] A
         INNER JOIN [dbo].[ClaseArticulo] C ON A.IdClaseArticulo = C.Id
         ORDER BY A.Nombre ASC;
-    END
+    END;
+
     ELSE
     BEGIN
         SET @outResultCode = 50006 -- Numero mal formado
-    END
+    END;
 
 	END TRY
 	BEGIN CATCH
@@ -57,7 +62,5 @@ BEGIN
 	SELECT @outResultCode AS ResultCode
 
 	SET NOCOUNT OFF;
-END
+END;
 GO
-
-EXEC MostrarArticulosPorCantidad 10, 0

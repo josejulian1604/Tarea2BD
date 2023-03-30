@@ -12,19 +12,19 @@ BEGIN
 		IF (ISNUMERIC(@inPrecio) = 0 OR @inPrecio = '')
 		BEGIN
 			SET @outResultCode = 50003 -- Error: el valor del precio no es un precio monetario correcto
-		END
+		END;
 
 		ELSE IF (@inNombre = '' OR @inClaseArticulo = '')
 		BEGIN
 			SET @outResultCode = 50002 -- Error: nombre mal formado
-		END
+		END;
 
 		ELSE IF (SELECT COUNT(Nombre) 
-			FROM Articulo
+			FROM [dbo].[Articulo]
 			WHERE Nombre = @inNombre) >= 1
 		BEGIN
 			SET @outResultCode = 50004 -- Error: ya existe un articulo con ese nombre
-		END
+		END;
 
 		ELSE IF (@outResultCode >= 0)
 		BEGIN
@@ -39,7 +39,7 @@ BEGIN
 			FROM [dbo].[ClaseArticulo] CA
 			WHERE CA.Nombre = @inClaseArticulo
 
-		END
+		END;
 	END TRY
 	BEGIN CATCH
 

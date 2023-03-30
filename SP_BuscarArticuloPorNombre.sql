@@ -72,5 +72,5 @@ BEGIN
 	SELECT @outResultCode AS ResultCode
 
 	SET NOCOUNT OFF;
-END
+END;
 GO
