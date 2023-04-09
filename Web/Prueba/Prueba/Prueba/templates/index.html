@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Lista de Articulos</h1>
+<div>
+    <a href="/insert" role="button">Insertar Articulo</a>
+</div>
+<br />
+
+{% if articulos %}
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+    </tr>
+    {% for articulo in articulos %}
+    <tr>
+        <td>{{ articulo[1] }}</td>
+        <td>{{ articulo[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No hay articulos disponibles.</p>
+{% endif %}
+
+{% endblock %}

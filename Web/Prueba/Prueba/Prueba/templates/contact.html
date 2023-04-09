@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<body>
+    <h1>{{ title }}.</h1>
+    <div>
+        <form method="GET" action="/contact">
+            <h4>Nombre</h4>
+            <input type="text" id="Nombretxt" name="Nombretxt" />
+            <button type="submit" name="filtrarNombre">Filtrar por Nombre</button>
+            <br /><br />
+            <h4>Cantidad</h4>
+            <input type="number" id="Cantidadtxt" name="Cantidadtxt" />
+            <button type="submit" name="filtrarCantidad">Filtrar por Cantidad</button>
+            <br /><br />
+            <h4>Clase Articulo</h4>
+            <select id="ClaseList" name="ClaseList">
+                {% for claseArticulo in claseArticulos %}
+                <option>{{ claseArticulo[0] }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" name="filtrarClase">Filtrar por Clase</button>
+            <br /><br />
+            <a class="btn" href="/insert">Insertar</a>
+            <a class="btn" href="/user">Logout</a>
+        </form>
+    </div>
+    <br /><br />
+    <div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Clase</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+            {% for articulo in articulos %}
+            <tr>
+                <td>{{ articulo[0] }}</td>
+                <td>{{ articulo[1] }}</td>
+                <td>{{ articulo[2] }}</td>
+                <td>{{ articulo[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+<h3>{{ message }}</h3>
+
+{% endblock %}
